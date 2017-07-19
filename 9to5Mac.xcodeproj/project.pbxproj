@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CB62E10B044E9645E28F30B /* Pods_9to5Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6917A3793CEA5440A1AED05A /* Pods_9to5Mac.framework */; };
 		224B94B81F1EFEC300030973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B94B71F1EFEC300030973 /* AppDelegate.swift */; };
 		224B94BA1F1EFEC300030973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B94B91F1EFEC300030973 /* ViewController.swift */; };
 		224B94BD1F1EFEC300030973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224B94BB1F1EFEC300030973 /* Main.storyboard */; };
 		224B94BF1F1EFEC300030973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224B94BE1F1EFEC300030973 /* Assets.xcassets */; };
 		224B94C21F1EFEC300030973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224B94C01F1EFEC300030973 /* LaunchScreen.storyboard */; };
+		224B94CA1F1F008D00030973 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B94C91F1F008D00030973 /* TableViewCell.swift */; };
+		229CAD2A1F1F1A3200BEA299 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229CAD291F1F1A3200BEA299 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		224B94BE1F1EFEC300030973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224B94C11F1EFEC300030973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		224B94C31F1EFEC300030973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224B94C91F1F008D00030973 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		229CAD291F1F1A3200BEA299 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6917A3793CEA5440A1AED05A /* Pods_9to5Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_9to5Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC1AF906F837A23C9A4DF70 /* Pods-9to5Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9to5Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac.release.xcconfig"; sourceTree = "<group>"; };
+		CFD308EC8EEC3EE95569AD97 /* Pods-9to5Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9to5Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB62E10B044E9645E28F30B /* Pods_9to5Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				224B94B61F1EFEC300030973 /* 9to5Mac */,
 				224B94B51F1EFEC300030973 /* Products */,
+				8BF688E7FCBCD4A3DD49E357 /* Pods */,
+				A51593E5F0E40F22999B1294 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,31 @@
 			children = (
 				224B94B71F1EFEC300030973 /* AppDelegate.swift */,
 				224B94B91F1EFEC300030973 /* ViewController.swift */,
+				224B94C91F1F008D00030973 /* TableViewCell.swift */,
+				229CAD291F1F1A3200BEA299 /* DetailViewController.swift */,
 				224B94BB1F1EFEC300030973 /* Main.storyboard */,
 				224B94BE1F1EFEC300030973 /* Assets.xcassets */,
 				224B94C01F1EFEC300030973 /* LaunchScreen.storyboard */,
 				224B94C31F1EFEC300030973 /* Info.plist */,
 			);
 			path = 9to5Mac;
+			sourceTree = "<group>";
+		};
+		8BF688E7FCBCD4A3DD49E357 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFD308EC8EEC3EE95569AD97 /* Pods-9to5Mac.debug.xcconfig */,
+				CBC1AF906F837A23C9A4DF70 /* Pods-9to5Mac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A51593E5F0E40F22999B1294 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6917A3793CEA5440A1AED05A /* Pods_9to5Mac.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224B94C61F1EFEC300030973 /* Build configuration list for PBXNativeTarget "9to5Mac" */;
 			buildPhases = (
+				B50E7DCEC5049F41B23B1ADD /* [CP] Check Pods Manifest.lock */,
 				224B94B01F1EFEC300030973 /* Sources */,
 				224B94B11F1EFEC300030973 /* Frameworks */,
 				224B94B21F1EFEC300030973 /* Resources */,
+				774B092CA9D3AA682EFBE46A /* [CP] Embed Pods Frameworks */,
+				F41A1D20A119E7B77A21FCCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,13 +162,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		774B092CA9D3AA682EFBE46A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B50E7DCEC5049F41B23B1ADD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F41A1D20A119E7B77A21FCCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		224B94B01F1EFEC300030973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224B94CA1F1F008D00030973 /* TableViewCell.swift in Sources */,
 				224B94BA1F1EFEC300030973 /* ViewController.swift in Sources */,
 				224B94B81F1EFEC300030973 /* AppDelegate.swift in Sources */,
+				229CAD2A1F1F1A3200BEA299 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,28 +349,32 @@
 		};
 		224B94C71F1EFEC300030973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD308EC8EEC3EE95569AD97 /* Pods-9to5Mac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BT7DC73YL;
 				INFOPLIST_FILE = 9to5Mac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TR.-to5Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		224B94C81F1EFEC300030973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC1AF906F837A23C9A4DF70 /* Pods-9to5Mac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BT7DC73YL;
 				INFOPLIST_FILE = 9to5Mac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TR.-to5Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -311,6 +398,7 @@
 				224B94C81F1EFEC300030973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
