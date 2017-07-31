@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.show()
         NotificationCenter.default.addObserver(self, selector:#selector(parseXML), name:NSNotification.Name.UIApplicationWillEnterForeground, object:UIApplication.shared
         )
         
@@ -36,6 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func parseXML(){
+        SVProgressHUD.show()
         let task = URLSession.shared.dataTask(with: URL(string: "https://9to5.mx5x.com/feed/")!) { data, response, error in
             if error != nil {
                 print(error as Any)
@@ -63,6 +63,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         if imgSrc.range(of:"9to5mac.files.wordpress.com") != nil {
                             self.imageURLs.append(URL(string: imgSrc)!)
                         }
+                    }
+                    if(try doc.select("img").array().count == 0){
+                        self.imageURLs.append(URL(string: "None")!)
                     }
                 }catch Exception.Error( _, let message){
                     print(message)
