@@ -14,7 +14,6 @@
 		224B94BF1F1EFEC300030973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224B94BE1F1EFEC300030973 /* Assets.xcassets */; };
 		224B94C21F1EFEC300030973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224B94C01F1EFEC300030973 /* LaunchScreen.storyboard */; };
 		224B94CA1F1F008D00030973 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B94C91F1F008D00030973 /* TableViewCell.swift */; };
-		229CAD2A1F1F1A3200BEA299 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229CAD291F1F1A3200BEA299 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		224B94C11F1EFEC300030973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		224B94C31F1EFEC300030973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224B94C91F1F008D00030973 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		229CAD291F1F1A3200BEA299 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6917A3793CEA5440A1AED05A /* Pods_9to5Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_9to5Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC1AF906F837A23C9A4DF70 /* Pods-9to5Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9to5Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac.release.xcconfig"; sourceTree = "<group>"; };
 		CFD308EC8EEC3EE95569AD97 /* Pods-9to5Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9to5Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-9to5Mac/Pods-9to5Mac.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				224B94B71F1EFEC300030973 /* AppDelegate.swift */,
 				224B94B91F1EFEC300030973 /* ViewController.swift */,
 				224B94C91F1F008D00030973 /* TableViewCell.swift */,
-				229CAD291F1F1A3200BEA299 /* DetailViewController.swift */,
 				224B94BB1F1EFEC300030973 /* Main.storyboard */,
 				224B94BE1F1EFEC300030973 /* Assets.xcassets */,
 				224B94C01F1EFEC300030973 /* LaunchScreen.storyboard */,
@@ -218,7 +215,6 @@
 				224B94CA1F1F008D00030973 /* TableViewCell.swift in Sources */,
 				224B94BA1F1EFEC300030973 /* ViewController.swift in Sources */,
 				224B94B81F1EFEC300030973 /* AppDelegate.swift in Sources */,
-				229CAD2A1F1F1A3200BEA299 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

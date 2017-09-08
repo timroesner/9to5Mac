@@ -10,6 +10,7 @@ import SWXMLHash
 import SVProgressHUD
 import SwiftSoup
 import SDWebImage
+import SafariServices
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -36,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func parseXML(){
         SVProgressHUD.show()
-        let task = URLSession.shared.dataTask(with: URL(string: "https://9to5.mx5x.com/feed/")!) { data, response, error in
+        let task = URLSession.shared.dataTask(with: URL(string: "https://9to5mac.com/feed")!) { data, response, error in
             if error != nil {
                 print(error as Any)
                 return
@@ -95,11 +96,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "detailView") as! DetailViewController
-           vc.link = articleURLs[indexPath.row]
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let safariVC = SFSafariViewController(url: articleURLs[indexPath.row], entersReaderIfAvailable: true)
+        present(safariVC, animated: true, completion: nil)
     }
 
 }
