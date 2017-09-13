@@ -26,6 +26,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         NotificationCenter.default.addObserver(self, selector:#selector(parseXML), name:NSNotification.Name.UIApplicationWillEnterForeground, object:UIApplication.shared
         )
         
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         parseXML()
     }
