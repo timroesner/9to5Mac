@@ -39,7 +39,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func parseXML(){
-        SVProgressHUD.show()
+        if(self.isViewLoaded && (self.view.window != nil)){
+            SVProgressHUD.show()
+        }
         let task = URLSession.shared.dataTask(with: URL(string: "https://9to5mac.com/feed")!) { data, response, error in
             if error != nil {
                 print(error as Any)

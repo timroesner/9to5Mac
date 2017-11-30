@@ -1,6 +1,11 @@
-<h1>9to5Mac</h1>
+# 9to5Mac
 
-Download and install on your own phone, given you have a developer certificate.
+## Description
+A native client to read 9to5Mac on your phone without ads and reader view on by default.
 
-<img src="https://user-images.githubusercontent.com/13894518/30354900-7a61526c-97e4-11e7-961a-411d12c909f1.png" width="400"/>
-<img src="https://user-images.githubusercontent.com/13894518/30354904-7e42e8aa-97e4-11e7-91dc-7cf7a895cca8.png" width="400"/>
+## Screenshots
+<img src="https://user-images.githubusercontent.com/13894518/33415395-160dceea-d54b-11e7-80ee-e3647249eec1.PNG" width="400"/>
+<img src="https://user-images.githubusercontent.com/13894518/33415397-1809afd4-d54b-11e7-95e4-222b2598500e.PNG" width="400"/>
+
+## Contributing
+If you have suggestions feel free to open an issue or make a PR
