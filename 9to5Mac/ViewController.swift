@@ -30,12 +30,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.navigationController?.navigationBar.prefersLargeTitles = true
         }
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.isAccessibilityElement = false
+        tableView.shouldGroupAccessibilityChildren = true
+        
         parseXML()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func parseXML(){
@@ -95,6 +93,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
         cell.thumbnail.sd_setImage(with: imageURLs[indexPath.row])
         cell.title.text = titles[indexPath.row]
+        cell.accessibilityLabel = titles[indexPath.row]
         SVProgressHUD.dismiss()
         return cell
     }
