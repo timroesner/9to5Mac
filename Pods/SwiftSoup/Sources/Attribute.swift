@@ -103,7 +103,7 @@ open class Attribute {
     }
 
     public func isDataAttribute() -> Bool {
-        return key.startsWith(Attributes.dataPrefix) && key.characters.count > Attributes.dataPrefix.characters.count
+        return key.startsWith(Attributes.dataPrefix) && key.count > Attributes.dataPrefix.count
     }
 
     /**
@@ -140,7 +140,7 @@ open class Attribute {
     }
 }
 
-extension Attribute : Equatable {
+extension Attribute: Equatable {
 	static public func == (lhs: Attribute, rhs: Attribute) -> Bool {
 		return lhs.value == rhs.value && lhs.key == rhs.key
 	}

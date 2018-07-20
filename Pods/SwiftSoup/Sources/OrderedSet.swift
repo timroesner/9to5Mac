@@ -107,7 +107,12 @@ public class OrderedSet<T: Hashable> {
 	public func remove(_ object: T) {
 		if let index = contents[object] {
 			contents[object] = nil
-			sequencedContents[index].deallocate(capacity: 1)
+            #if !swift(>=4.1)
+                sequencedContents[index].deallocate(capacity: 1)
+            #else
+                sequencedContents[index].deallocate()
+            #endif
+            
 			sequencedContents.remove(at: index)
 
 			for (object, i) in contents {
@@ -150,10 +155,13 @@ public class OrderedSet<T: Hashable> {
 	public func removeAllObjects() {
 		contents.removeAll()
 
-		for sequencedContent in sequencedContents {
-			sequencedContent.deallocate(capacity: 1)
-		}
-
+        for sequencedContent in sequencedContents {
+            #if !swift(>=4.1)
+            sequencedContent.deallocate(capacity: 1)
+            #else
+            sequencedContent.deallocate()
+            #endif
+        }
 		sequencedContents.removeAll()
 	}
 
@@ -399,31 +407,31 @@ public struct OrderedSetGenerator<T: Hashable>: IteratorProtocol {
 
 extension OrderedSetGenerator where T: Comparable {}
 
-public func +<T: Hashable, S: Sequence> (lhs: OrderedSet<T>, rhs: S) -> OrderedSet<T> where S.Iterator.Element == T {
+public func +<T, S: Sequence> (lhs: OrderedSet<T>, rhs: S) -> OrderedSet<T> where S.Iterator.Element == T {
 	let joinedSet = lhs
 	joinedSet.append(contentsOf: rhs)
 
 	return joinedSet
 }
 
-public func +=<T: Hashable, S: Sequence> (lhs: inout OrderedSet<T>, rhs: S) where S.Iterator.Element == T {
+public func +=<T, S: Sequence> (lhs: inout OrderedSet<T>, rhs: S) where S.Iterator.Element == T {
 	lhs.append(contentsOf: rhs)
 }
 
-public func -<T: Hashable, S: Sequence> (lhs: OrderedSet<T>, rhs: S) -> OrderedSet<T> where S.Iterator.Element == T {
+public func -<T, S: Sequence> (lhs: OrderedSet<T>, rhs: S) -> OrderedSet<T> where S.Iterator.Element == T {
 	let purgedSet = lhs
 	purgedSet.remove(rhs)
 
 	return purgedSet
 }
 
-public func -=<T: Hashable, S: Sequence> (lhs: inout OrderedSet<T>, rhs: S) where S.Iterator.Element == T {
+public func -=<T, S: Sequence> (lhs: inout OrderedSet<T>, rhs: S) where S.Iterator.Element == T {
 	lhs.remove(rhs)
 }
 
 extension OrderedSet: Equatable { }
 
-public func ==<T: Hashable> (lhs: OrderedSet<T>, rhs: OrderedSet<T>) -> Bool {
+public func ==<T> (lhs: OrderedSet<T>, rhs: OrderedSet<T>) -> Bool {
 	if lhs.count != rhs.count {
 		return false
 	}

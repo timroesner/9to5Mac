@@ -15,15 +15,17 @@ extension Character {
     public static let BackslashN: Character = "\n"
     public static let BackslashF: Character = Character(UnicodeScalar(12))
     public static let BackslashR: Character = "\r"
+    public static let BackshashRBackslashN: Character = "\r\n"
 
     //http://www.unicode.org/glossary/#supplementary_code_point
     public static let MIN_SUPPLEMENTARY_CODE_POINT: UInt32 = 0x010000
 
     /// True for any space character, and the control characters \t, \n, \r, \f, \v.
-    
+
     var isWhitespace: Bool {
         switch self {
-        case Character.space, Character.BackslashT, Character.BackslashN,Character.BackslashF,Character.BackslashR: return true
+        case Character.space, Character.BackslashT, Character.BackslashN, Character.BackslashF, Character.BackslashR: return true
+        case Character.BackshashRBackslashN: return true
         default: return false
 
         }

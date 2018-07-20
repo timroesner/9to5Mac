@@ -20,6 +20,7 @@ open class Tag: Hashable {
     }()
 
     fileprivate var _tagName: String
+    fileprivate var _tagNameNormal: String
     fileprivate var _isBlock: Bool = true // block or inline
     fileprivate var _formatAsBlock: Bool = true // should be formatted as a block
     fileprivate var _canContainBlock: Bool = true // Can this tag hold block level tags?
@@ -32,6 +33,7 @@ open class Tag: Hashable {
 
     public init(_ tagName: String) {
         self._tagName = tagName
+        self._tagNameNormal = tagName.lowercased()
     }
 
     /**
@@ -41,6 +43,9 @@ open class Tag: Hashable {
      */
     open func getName() -> String {
         return self._tagName
+    }
+    open func getNameNormal() -> String {
+        return self._tagNameNormal
     }
 
     /**
@@ -210,7 +215,7 @@ open class Tag: Hashable {
         let this = lhs
         let o = rhs
         if (this === o) {return true}
-        if (type(of:this) != type(of:o)) {return false}
+        if (type(of: this) != type(of: o)) {return false}
 
         let tag: Tag = o
 
@@ -235,17 +240,7 @@ open class Tag: Hashable {
     /// Hash values are not guaranteed to be equal across different executions of
     /// your program. Do not save hash values to use during a future execution.
     public var hashValue: Int {
-        var result: Int  = _tagName.hashValue
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _isBlock ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _formatAsBlock ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _canContainBlock ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _canContainInline ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _empty ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _selfClosing ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _preserveWhitespace ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _formList ? 1 : 0).0
-        result = Int.addWithOverflow(Int.multiplyWithOverflow(31, result).0, _formSubmit ? 1 : 0).0
-        return result
+        return _tagName.hashValue ^ _isBlock.hashValue ^ _formatAsBlock.hashValue ^ _canContainBlock.hashValue ^ _canContainInline.hashValue ^ _empty.hashValue ^ _selfClosing.hashValue ^ _preserveWhitespace.hashValue ^ _formList.hashValue ^ _formSubmit.hashValue
     }
 
     open func toString() -> String {

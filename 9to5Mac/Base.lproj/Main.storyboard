@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,10 +35,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-UX-KzE">
-                                                    <rect key="frame" x="15" y="11" width="345" height="137.5"/>
+                                                    <rect key="frame" x="7" y="11" width="361" height="137.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-Zp-mQ8">
-                                                    <rect key="frame" x="8" y="155" width="359" height="41"/>
+                                                    <rect key="frame" x="7" y="155" width="361" height="41"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <bool key="isElement" value="NO"/>
                                                     </accessibility>
@@ -50,12 +50,12 @@
                                             <constraints>
                                                 <constraint firstItem="CfE-UX-KzE" firstAttribute="top" secondItem="2Wa-jD-aS2" secondAttribute="topMargin" id="3gn-bY-Nlf"/>
                                                 <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="6.5" id="94V-po-YxP"/>
-                                                <constraint firstAttribute="trailing" secondItem="wOO-Zp-mQ8" secondAttribute="trailing" constant="8" id="A2m-M7-JGY"/>
                                                 <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="6.5" id="G36-Rz-Nnc"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leading" constant="8" id="OJs-L0-jSg"/>
+                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="trailing" secondItem="CfE-UX-KzE" secondAttribute="trailing" id="dqK-6m-wkG"/>
                                                 <constraint firstAttribute="bottom" secondItem="wOO-Zp-mQ8" secondAttribute="bottom" constant="1.5" id="h3h-YC-IMG"/>
-                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leadingMargin" id="pmb-hW-DsH"/>
-                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="trailing" secondItem="2Wa-jD-aS2" secondAttribute="trailingMargin" id="qao-G0-Eld"/>
+                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leadingMargin" constant="-8" id="pmb-hW-DsH"/>
+                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="trailing" secondItem="2Wa-jD-aS2" secondAttribute="trailingMargin" constant="8" id="qao-G0-Eld"/>
+                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="leading" secondItem="CfE-UX-KzE" secondAttribute="leading" id="wGC-2R-ZCR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" hint="Double tap to read story">

@@ -38,7 +38,7 @@ open class Attributes: NSCopying {
      @see #hasKey(String)
      */
     open func  get(key: String) -> String {
-        let attr: Attribute? = attributes.get(key:key)
+        let attr: Attribute? = attributes.get(key: key)
 		return attr != nil ? attr!.getValue() : ""
     }
 
@@ -86,7 +86,7 @@ open class Attributes: NSCopying {
      @param attribute attribute
      */
     open func put(attribute: Attribute) {
-        attributes.put(value: attribute, forKey:attribute.getKey())
+        attributes.put(value: attribute, forKey: attribute.getKey())
     }
 
     /**
@@ -189,7 +189,7 @@ open class Attributes: NSCopying {
 		for attribute in attributes {
 			let attr = attribute.1
 			if(attr.isDataAttribute()) {
-				let key = attr.getKey().substring(Attributes.dataPrefix.characters.count)
+				let key = attr.getKey().substring(Attributes.dataPrefix.count)
 				dataset[key] = attribute.1.getValue()
 			}
 		}
@@ -254,7 +254,7 @@ open class Attributes: NSCopying {
 
 }
 
-extension Attributes : Sequence {
+extension Attributes: Sequence {
 	public func makeIterator() -> AnyIterator<Attribute> {
 		var list = attributes.orderedValues
 		return AnyIterator {

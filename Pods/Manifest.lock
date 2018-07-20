@@ -1,10 +1,10 @@
 PODS:
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - SVProgressHUD (2.1.2)
-  - SwiftSoup (1.4.2)
-  - SWXMLHash (4.1.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SVProgressHUD (2.2.5)
+  - SwiftSoup (1.7.2)
+  - SWXMLHash (4.7.0)
 
 DEPENDENCIES:
   - SDWebImage
@@ -12,12 +12,19 @@ DEPENDENCIES:
   - SwiftSoup
   - SWXMLHash
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - SVProgressHUD
+    - SwiftSoup
+    - SWXMLHash
+
 SPEC CHECKSUMS:
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  SwiftSoup: 9638363718859b469c3d7877b2b6a640348bacb7
-  SWXMLHash: 21340633daddd9aaf5c625ae92a26ca6dcdbfe1b
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftSoup: e5f61d37e3d802a4b5db81b4945de3da9bfdf115
+  SWXMLHash: f4522438189f72b41e39676d19469a8969d60dd1
 
 PODFILE CHECKSUM: e290b7ea82c8141cbbd9dd2e1b4ebdc78d834055
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
