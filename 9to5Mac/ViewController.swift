@@ -32,15 +32,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.isAccessibilityElement = false
         tableView.shouldGroupAccessibilityChildren = true
-        
+        SVProgressHUD.show()
         parseXML()
     }
     
     @objc func parseXML(){
-        SVProgressHUD.show()
-//        if(self.isViewLoaded && (self.view.window != nil)){
-//            SVProgressHUD.show()
-//        }
+        if(self.viewIfLoaded?.window != nil) {
+            SVProgressHUD.show()
+        }
         let task = URLSession.shared.dataTask(with: URL(string: "https://9to5mac.com/feed")!) { data, response, error in
             if error != nil {
                 print(error as Any)
