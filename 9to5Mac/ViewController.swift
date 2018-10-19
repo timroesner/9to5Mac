@@ -64,7 +64,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         let imgSrc = try element.attr("src")
                         // Check if thumbnail and not an image of a pixel ?!
                         if imgSrc.range(of:"9to5mac.com/wp-content") != nil {
-                            self.imageURLs.append(URL(string: imgSrc)!)
+                            guard let url = URL(string: imgSrc) else {
+                                print(imgSrc)
+                                self.imageURLs.append(URL(string: "None")!)
+                                break
+                            }
+                            self.imageURLs.append(url)
                         }
                     }
                     if(try doc.select("img").array().count == 0){
