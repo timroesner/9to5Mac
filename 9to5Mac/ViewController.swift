@@ -32,6 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.isAccessibilityElement = false
         tableView.shouldGroupAccessibilityChildren = true
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 275
         SVProgressHUD.show()
         parseXML()
     }
