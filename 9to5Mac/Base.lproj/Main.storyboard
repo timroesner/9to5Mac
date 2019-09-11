@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,40 +19,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-jw-gK5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-jw-gK5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="198" id="pyV-Qo-mOf" customClass="TableViewCell" customModule="_to5Mac" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="198"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="265" id="pyV-Qo-mOf" customClass="TableViewCell" customModule="_to5Mac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="265"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pyV-Qo-mOf" id="2Wa-jD-aS2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="197.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-UX-KzE">
-                                                    <rect key="frame" x="7" y="11" width="361" height="137.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="192.5"/>
+                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="CfE-UX-KzE" secondAttribute="height" multiplier="280:150" id="Ebc-9g-g8l"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-Zp-mQ8">
-                                                    <rect key="frame" x="7" y="155" width="361" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-Zp-mQ8">
+                                                    <rect key="frame" x="8" y="204.5" width="359" height="56.5"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <bool key="isElement" value="NO"/>
                                                     </accessibility>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="top" secondItem="2Wa-jD-aS2" secondAttribute="topMargin" id="3gn-bY-Nlf"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="6.5" id="94V-po-YxP"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="6.5" id="G36-Rz-Nnc"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="trailing" secondItem="CfE-UX-KzE" secondAttribute="trailing" id="dqK-6m-wkG"/>
-                                                <constraint firstAttribute="bottom" secondItem="wOO-Zp-mQ8" secondAttribute="bottom" constant="1.5" id="h3h-YC-IMG"/>
-                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leadingMargin" constant="-8" id="pmb-hW-DsH"/>
-                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="trailing" secondItem="2Wa-jD-aS2" secondAttribute="trailingMargin" constant="8" id="qao-G0-Eld"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="leading" secondItem="CfE-UX-KzE" secondAttribute="leading" id="wGC-2R-ZCR"/>
+                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leading" constant="8" id="0Ym-iZ-Ahm"/>
+                                                <constraint firstAttribute="trailing" secondItem="CfE-UX-KzE" secondAttribute="trailing" constant="8" id="Ec8-7S-ZIz"/>
+                                                <constraint firstItem="CfE-UX-KzE" firstAttribute="top" secondItem="2Wa-jD-aS2" secondAttribute="top" constant="8" id="G2w-70-aVT"/>
+                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leading" constant="8" id="QiE-fA-SNO"/>
+                                                <constraint firstAttribute="trailing" secondItem="wOO-Zp-mQ8" secondAttribute="trailing" constant="8" id="jZQ-wG-mnW"/>
+                                                <constraint firstAttribute="bottom" secondItem="wOO-Zp-mQ8" secondAttribute="bottom" constant="4" id="oMP-Oy-iHH"/>
+                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="4" id="ybt-8J-9Cn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" hint="Double tap to read story">
@@ -73,7 +72,13 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mWq-jw-gK5" secondAttribute="trailing" id="ap6-If-a8R"/>
+                            <constraint firstItem="mWq-jw-gK5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dGj-5c-pt3"/>
+                            <constraint firstItem="mWq-jw-gK5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hDS-rP-EGs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mWq-jw-gK5" secondAttribute="bottom" id="oiQ-Sz-45R"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="9to5Mac" id="zeG-ho-bX8">
                         <barButtonItem key="backBarButtonItem" title="Back" id="jOJ-VM-zNO"/>
@@ -84,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="126"/>
+            <point key="canvasLocation" x="316" y="125.4872563718141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xjh-Bj-2bz">
@@ -92,7 +97,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umS-Z0-Mk0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKe-Ro-FMD">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
