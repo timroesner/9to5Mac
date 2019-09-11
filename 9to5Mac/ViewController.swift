@@ -9,7 +9,7 @@ import UIKit
 import SWXMLHash
 import SVProgressHUD
 import SwiftSoup
-import SDWebImage
+import Kingfisher
 import SafariServices
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -95,7 +95,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
-        cell.thumbnail.sd_setImage(with: imageURLs[safe: indexPath.row])
+        cell.thumbnail.kf.setImage(with: imageURLs[safe: indexPath.row], placeholder: #imageLiteral(resourceName: "Placeholder"))
         cell.title.text = titles[safe: indexPath.row]
         cell.accessibilityLabel = titles[safe: indexPath.row]
         SVProgressHUD.dismiss()
