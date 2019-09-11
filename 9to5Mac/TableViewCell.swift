@@ -14,6 +14,10 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if #available(iOS 13, *) {
+            thumbnail.layer.cornerCurve = .continuous
+        }
+        thumbnail.layer.cornerRadius = 8
         
         if #available(iOS 11, *) {
             thumbnail.accessibilityIgnoresInvertColors = true
