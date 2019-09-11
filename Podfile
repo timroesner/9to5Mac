@@ -5,7 +5,7 @@ target '9to5Mac' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'SWXMLHash'
-  pod 'SDWebImage'
+  pod 'Kingfisher'
   pod 'SVProgressHUD'
   pod 'SwiftSoup'
 
