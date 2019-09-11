@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector:#selector(parseXML), name:NSNotification.Name.UIApplicationWillEnterForeground, object:UIApplication.shared
+        NotificationCenter.default.addObserver(self, selector:#selector(parseXML), name:UIApplication.willEnterForegroundNotification, object:UIApplication.shared
         )
         
         if #available(iOS 11.0, *) {
@@ -112,10 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 extension Collection {
     
-    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
     subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
-    
 }
-
