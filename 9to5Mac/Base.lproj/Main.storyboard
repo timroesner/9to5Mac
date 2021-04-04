@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umS-Z0-Mk0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-jw-gK5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="265" id="pyV-Qo-mOf" customClass="TableViewCell" customModule="_to5Mac" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="265"/>
@@ -32,13 +33,13 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-UX-KzE">
                                                     <rect key="frame" x="8" y="8" width="359" height="192.5"/>
-                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="CfE-UX-KzE" secondAttribute="height" multiplier="280:150" id="Ebc-9g-g8l"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-Zp-mQ8">
-                                                    <rect key="frame" x="8" y="204.5" width="359" height="56.5"/>
+                                                    <rect key="frame" x="8" y="208.5" width="359" height="40.5"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <bool key="isElement" value="NO"/>
                                                     </accessibility>
@@ -53,8 +54,8 @@
                                                 <constraint firstItem="CfE-UX-KzE" firstAttribute="top" secondItem="2Wa-jD-aS2" secondAttribute="top" constant="8" id="G2w-70-aVT"/>
                                                 <constraint firstItem="wOO-Zp-mQ8" firstAttribute="leading" secondItem="2Wa-jD-aS2" secondAttribute="leading" constant="8" id="QiE-fA-SNO"/>
                                                 <constraint firstAttribute="trailing" secondItem="wOO-Zp-mQ8" secondAttribute="trailing" constant="8" id="jZQ-wG-mnW"/>
-                                                <constraint firstAttribute="bottom" secondItem="wOO-Zp-mQ8" secondAttribute="bottom" constant="4" id="oMP-Oy-iHH"/>
-                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="4" id="ybt-8J-9Cn"/>
+                                                <constraint firstAttribute="bottom" secondItem="wOO-Zp-mQ8" secondAttribute="bottom" constant="16" id="oMP-Oy-iHH"/>
+                                                <constraint firstItem="wOO-Zp-mQ8" firstAttribute="top" secondItem="CfE-UX-KzE" secondAttribute="bottom" constant="8" id="ybt-8J-9Cn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" hint="Double tap to read story">
@@ -72,7 +73,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mWq-jw-gK5" secondAttribute="trailing" id="ap6-If-a8R"/>
                             <constraint firstItem="mWq-jw-gK5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dGj-5c-pt3"/>
@@ -110,4 +111,12 @@
             <point key="canvasLocation" x="-484" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

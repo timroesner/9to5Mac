@@ -23,5 +23,4 @@ class TableViewCell: UITableViewCell {
             thumbnail.accessibilityIgnoresInvertColors = true
         }
     }
-
 }
